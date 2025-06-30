@@ -1,183 +1,60 @@
 body {
-    font-family: 'Press Start 2P', cursive;
-    max-width: 800px;
-    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 20px;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #0c0c20, #1a0a2e);
-    color: #e0e0e0;
-    position: relative;
-    overflow: hidden;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: contain;
+    background-color: #1a0a2e;
+    color: #f0f0f0;
     min-height: 100vh;
 }
 
-.gothic-sky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #1d1135, #0c0c20);
-    z-index: -2;
-}
-
-.blood-moon {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 60px;
-    height: 60px;
-    background: #d44;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #f00, 0 0 60px #d00;
-    animation: pulse 3s infinite alternate;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 20px #f00; }
-    100% { box-shadow: 0 0 40px #f00, 0 0 80px #d00; }
-}
-
-.fog {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: rgba(50, 50, 70, 0.6);
-    filter: blur(5px);
-    animation: fogMove 20s infinite linear;
-}
-
-@keyframes fogMove {
-    0% { background-position: 0 0; }
-    100% { background-position: 100px 0; }
-}
-
-.castle-silhouette {
-    position: absolute;
-    bottom: 150px;
-    right: 50px;
-    display: flex;
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.7));
-}
-
-.tower {
-    width: 40px;
-    height: 150px;
-    background: #222;
-    margin: 0 8px;
-    position: relative;
-    border-left: 2px solid #444;
-    border-right: 2px solid #444;
-}
-
-.tower:before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: -5px;
-    width: 50px;
-    height: 15px;
-    background: #333;
-    border: 2px solid #444;
-}
-
-.central-keep {
-    width: 80px;
-    height: 120px;
-    background: #222;
-    margin: 0 10px;
-    position: relative;
-    border: 2px solid #444;
-}
-
-.central-keep:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -2px;
-    width: 84px;
-    height: 10px;
-    background: #333;
-    border: 2px solid #444;
-}
-
-.battlement {
-    position: absolute;
-    bottom: 120px;
-    width: 100%;
-    height: 20px;
-    background: #333;
-    border: 2px solid #444;
-}
-
-.stone-platform {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: 
-        linear-gradient(45deg, #333 25%, transparent 25%, transparent 75%, #333 75%),
-        linear-gradient(45deg, #333 25%, #222 25%, #222 75%, #333 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    z-index: -1;
-}
-
-.pixel-character.hero {
-    position: absolute;
-    width: 32px;
-    height: 64px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 64"><rect fill="%23444" x="8" y="20" width="16" height="40"/><rect fill="%23d44" x="8" y="8" width="16" height="12"/><rect fill="%23000" x="12" y="16" width="4" height="4"/><rect fill="%23000" x="16" y="16" width="4" height="4"/></svg>') no-repeat;
-    bottom: 150px;
-    left: 200px;
-    z-index: 1;
+main {
+    background: rgba(30, 15, 40, 0.7);
+    backdrop-filter: blur(5px);
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 header {
     text-align: center;
     margin-bottom: 40px;
-    text-shadow: 3px 3px 0 #000;
-    position: relative;
-    z-index: 1;
 }
 
 h1 {
-    color: #d44;
+    color: #ff6b6b;
     font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+p {
+    color: #e0e0e0;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
 }
 
 .card {
-    background: 
-        linear-gradient(rgba(30, 15, 40, 0.8), rgba(20, 10, 30, 0.8)),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23333" x="0" y="0" width="100" height="100"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="%23444" stroke-width="1"/></svg>');
-    background-size: cover;
+    background: rgba(20, 10, 30, 0.9);
     padding: 20px;
-    border-radius: 0;
-    border: 4px solid #666;
-    box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4ecdc4;
 }
 
 .card h3 {
-    color: #d44;
-    border-bottom: 2px solid #666;
+    color: #4ecdc4;
+    margin-top: 0;
     padding-bottom: 10px;
+    border-bottom: 1px solid #ff6b6b;
 }
 
 footer {
     text-align: center;
     margin-top: 40px;
     color: #a0a0a0;
-    font-size: 0.7em;
-    position: relative;
-    z-index: 1;
-    text-transform: uppercase;
+    font-size: 0.9em;
 }
